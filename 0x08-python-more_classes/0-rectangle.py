@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class."""
+"""0x08. Python - More Classes and Objects"""
+
 
 class Rectangle:
-    """Represent a rectangle."""
-    
+    """The class Rectangle"""
     pass
