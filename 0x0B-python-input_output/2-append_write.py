@@ -1,13 +1,17 @@
 #!/usr/bin/python3
-"""
-Append to a file
+"""Module has a functction that checks if an object is an instance
+or a specified class
 """
 
 
-def append_write(filename="", text=""):
+def is_same_class(obj, a_class):
+    """ returns True if the object is exactly an
+        instance of the specified class ; otherwise False
+    Args:
+        obj (obj): the object to check
+        a_class (obj): The class to check against
+    Returns:
+        bool: if isinstance othewise false
     """
-    Appends a string at the end of a text file and returns
-    the number of characters added
-    """
-    with open(filename, mode="a+") as file:
-        return file.write(text)
+
+    return True if type(obj) is a_class else False

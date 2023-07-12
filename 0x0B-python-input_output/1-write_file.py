@@ -1,15 +1,18 @@
 #!/usr/bin/python3
-"""Defines a file-writing function."""
+"""
+Contains a class MyList that inherits from list builtin
+"""
 
 
-def write_file(filename="", text=""):
-    """Write a string to a UTF8 text file.
+class MyList(list):
+    """Inherits from the list class"""
 
-    Args:
-        filename (str): The name of the file to write.
-        text (str): The text to write to the file.
-    Returns:
-        The number of characters written.
-    """
-    with open(filename, "w", encoding="utf-8") as f:
-        return f.write(text)
+    def __init__(self):
+        """Initializes the object
+        """
+        super().__init__()
+
+    def print_sorted(self):
+        """Prints the sorted list
+        """
+        print(sorted(self))
