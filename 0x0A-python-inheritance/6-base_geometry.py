@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-"""Defines a base geometry class BaseGeometry."""
+"""Module that has an empty base class BaseGeometry and empty class function
+"""
 
 
 class BaseGeometry:
-    """Represent base geometry."""
+    """Geometry Class
+    """
 
     def area(self):
-        """Not implemented."""
+        """Calculates the area
+            Returns:
+                float: area
+        """
         raise Exception("area() is not implemented")

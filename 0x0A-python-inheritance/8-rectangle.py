@@ -1,17 +1,22 @@
 #!/usr/bin/python3
-Rectangle = __import__('8-rectangle').Rectangle
+"""Module that holds the class Rectangle
+"""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-r = Rectangle(3, 5)
 
-print(r)
-print(dir(r))
+class Rectangle(BaseGeometry):
+    """Inherits from BaseGeometry
+    """
 
-try:
-    print("Rectangle: {} - {}".format(r.width, r.height))
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    def __init__(self, width, height):
+        """Initializes the class
+            Args:
+                width (int): width rectangle
+                height (int): height rectangle
+        """
 
-try:
-    r2 = Rectangle(4, True)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+        self.integer_validator("width", width)
+        self.__width = width
+
+        self.integer_validator("height", height)
+        self.__height = height
